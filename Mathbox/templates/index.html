@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static './images/favicon.ico' %}"/>
+    <title>Mathbox-Home</title>
+    <link rel="stylesheet" href="{% static './css/style.css' %}"/>
+    <script src="{% static './js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#">
+                <img src="{% static './images/logo-text.svg' %}" alt=""/>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'web:index' %}">Home</a></li>
+                <li><a href="{% url 'web:documentation' %}">Documentation</a></li>
+                <li><a href="{% url 'web:exercises' %}">Exercises</a></li>
+                <li><a href="{% url 'web:games' %}">Games</a></li>
+                <li><a href="{% url 'web:community' %}">Community</a></li>
+                <li><a href="{% url 'web:tools' %}">Tools <img src="{% static './images/arrow-down-sign-to-navigate.svg' %}" alt=""/></a></li>
+            </ul>
+        </nav>
+        <ul>
+            <li>
+                <div class="form" style="opacity: 0%;">
+                    <input type="search" placeholder="Search..."/>
+                    <img src="{% static './images/search.svg' %}" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <section class="home">
+        <section class="wrapper">
+            <div class="flex">
+                <h1>Learn MATHEMATICS more and more !</h1>
+                <p>Improve your math skills through Mathbox ! In Mathbox you can learn maths by playing interesting games and exercises. This website also includes documentation about mathematical studies. Mathbox has a community to share ideas about mathematics and many tools for solving mathematical problems.</p>
+                <a href="{% url 'web:documentation' %}"><button>Start Now <img src="{% static './images/angle-double-small-right.svg' %}" alt=""/></button></a>
+            </div>
+        </section>
+    </section>
+    <section class="activity">
+        <section class="wrapper">
+            <div class="flex">
+                <div class="box">
+                    <h1>+ Games</h1>
+                    <p>More games for improving mathematical skills! You can play many interesting games while learning about mathematical problems and solving methods.</p>
+                    <a href="{% url 'web:games' %}"><button class="violet">Play Games <img src="{% static './images/right.svg' %}" alt=""></button></a>
+                </div>
+                <div class="box">
+                    <h1>+ Exercises</h1>
+                    <p>Practice more math exercises! They sharpen your problem-solving skills and enhance concentration.</p>
+                    <a href="{% url 'web:exercises' %}"><button class="orange">Do Exercises <img src="{% static './images/right.svg' %}" alt=""></button></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="doc">
+        <section class="wrapper">
+            <div class="title">
+                <h1>Mathematics, A world of wonder !</h1>
+                <img src="{% static './images/document.svg' %}" alt="doc"/>
+            </div>
+            <div class="flex">
+                <div class="content">
+                    <p>Mathematics is more than just numbers—it's a universal language that helps us make sense of the world. At the heart of our platform is the belief that learning math should be intuitive, engaging, and accessible to everyone. Our documentation is designed to guide learners through concepts step-by-step, combining clear explanations with visual aids and real-world examples. Whether you're just beginning your math journey or looking to deepen your understanding, our resources are here to support you every step of the way.</p>
+                    <a href="{% url 'web:documentation' %}"><button>View Documentation</button></a>
+                </div>
+                <img src="{% static './images/doc_img.png' %}" alt="" class="bg"/>
+            </div>
+        </section>
+    </section>
+    <section class="tool">
+        <section class="wrapper">
+            <div class="title">
+                <h1>Tools in Mathbox...</h1>
+                <img src="{% static './images/tools.svg ' %}" alt="tool"/>
+            </div>
+            <div class="flex">
+                <img src="{% static './images/tools_img.png' %}" alt="" class="bg"/>
+                <div class="content">
+                    <p>Mathbox offers a range of powerful and easy-to-use tools to simplify everyday math tasks. From the Area Calculator to the Average Calculator, each tool is designed to deliver quick, accurate results with minimal effort. Whether you're finding the area of a shape, calculating averages, working out percentages, or solving other common math problems, Mathbox makes it all fast and straightforward. With a clean interface and helpful features, Mathbox is the perfect companion for students, teachers, and anyone who needs reliable math solutions at their fingertips.</p>
+                    <a href="{% url 'web:tools' %}"><button>View Tools</button></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="com">
+        <section class="wrapper">
+            <div class="title">
+                <h1>Mathbox Community...</h1>
+                <img src="{% static './images/community.svg ' %}" alt="community"/>
+            </div>
+            <div class="flex">
+                <div class="content">
+                    <p>The Mathbox community is a vibrant space where math enthusiasts, students, and educators come together to learn, share, and grow. Whether you're seeking help with a tricky problem, looking to share your own tips, or just want to connect with others who love math, the Mathbox community is here to support you. Users can participate in discussions, contribute ideas for new tools, and collaborate on solving real-world math challenges. It's more than just a support system—it's a hub for curiosity, creativity, and connection in the world of mathematics.</p>
+                    <a href="{% url 'web:community' %}"><button>View Community</button></a>
+                </div>
+                <img src="{% static './images/community_img.png' %}" alt="" class="bg"/>
+            </div>
+        </section>
+    </section>
+    <section class="faq" id="faq">
+        <section class="wrapper">
+            <h1>Faq</h1>
+            <div class="grid">
+                {% for faq in faqs %}
+                <div class="box">
+                    <h3>{{faq.question}}</h3>
+                    <p>{{faq.answer}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </section>
+    <section class="features">
+        <section class="wrapper">
+            <div class="grid">
+                <div class="box">
+                    <img src="{% static './images//exercise.svg' %}" alt=""/>
+                    <h3>Self-checking Exercises</h3>
+                </div>
+                <div class="box">
+                    <img src="{% static './images/game.svg' %}" alt=""/>
+                    <h3>Fun Games</h3>
+                </div>
+                <div class="box">
+                    <img src="{% static './images/community.svg' %}" alt=""/>
+                    <h3>Interactive Community</h3>
+                </div>
+                <div class="box">
+                    <img src="{% static './images/tools.svg' %}" alt=""/>
+                    <h3>Time-saving Tools</h3>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+          
+          <!-- Branding -->
+          <div class="footer-section">
+            <img src="{% static './images/logo-text.png' %}" alt=""/>
+            <p class="footer-description">
+              Explore fun math games, in-depth documentation, interactive exercises, powerful tools, and a friendly community — all in one place.
+            </p>
+          </div>
+    
+          <!-- Explore -->
+          <div class="footer-section">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="{% url 'web:games' %}">Math Games</a></li>
+              <li><a href="{% url 'web:documentation' %}">Documentation</a></li>
+              <li><a href="{% url 'web:exercises' %}">Exercises</a></li>
+              <li><a href="{% url 'web:tools' %}">Tools</a></li>
+              <li><a href="{% url 'web:community' %}">Community</a></li>
+            </ul>
+          </div>
+    
+          <!-- Resources -->
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+    
+          <!-- Connect -->
+          <div class="footer-section">
+            <h3>Connect</h3>
+            <p>Address: Nafil Manzil / Mekkone / Kottamkara / Chandanathope P.O. / Kollam-691014 / Kerala / India</p>
+            <p>Email: nafilmnytfj@gmail.com</p>
+            <p>Phone Number: +91 9544758339</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Mathbox. All rights reserved.
+        </div>
+      </footer>
+</body>
+</html>

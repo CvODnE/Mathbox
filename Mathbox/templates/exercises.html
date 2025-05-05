@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="{% static './images/favicon.ico' %}"/>
+    <title>MathBox-Exercises-{{exercises.about}}</title>
+    <style>
+        @font-face {
+            font-family: mulish;
+            src: url({% static './fonts/Mulish-VariableFont_wght.ttf' %});
+        }
+    </style>
+    <style>{{ exercises.css|safe }}</style>
+</head>
+<body>
+    {{ exercises.html|safe }}
+    <script>
+        const STATIC_URL = "{% static '' %}";
+    </script>
+    <script>
+        {{exercises.js|safe}}
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static './images/favicon.ico' %}"/>
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: mulish;
+            src: url({% static './fonts/Mulish-VariableFont_wght.ttf' %});
+        }
+    </style>
+    <style>{{tool.css|safe}}</style>
+</head>
+<body>
+    {{tool.html|safe}}
+    <script>
+        {{tool.js|safe}}
+    </script>
+</body>
+</html>

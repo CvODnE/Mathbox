@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static './images/favicon.ico' %}"/>
+    <title>MathBox-Community</title>
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <script src="{% static './js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#">
+                <img src="{% static './images/logo-text.svg' %}" alt=""/>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'web:index' %}">Home</a></li>
+                <li><a href="{% url 'web:documentation' %}">Documentation</a></li>
+                <li><a href="{% url 'web:exercises' %}">Exercises</a></li>
+                <li><a href="{% url 'web:games' %}">Games</a></li>
+                <li><a href="{% url 'web:community' %}">Community</a></li>
+                <li><a href="{% url 'web:tools' %}">Tools <img src="{% static './images/arrow-down-sign-to-navigate.svg' %}" alt=""/></a></li>
+            </ul>
+        </nav>
+        <ul>
+            <li>
+                <div class="form">
+                    <input type="search" placeholder="Search..." id="communitySearch"/>
+                    <img src="{% static './images/search.svg' %}" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <section class="community">
+        <section class="wrapper">
+          <h1 style="color: teal;font-size: 55px;text-align: center;">Our Community</h1>
+          <div class="post_container">
+            <div id="posts">
+              {% for post in posts %}
+              <div class="community-card" data-name="{{ post.content|lower }}">
+                <h4 style="text-align: right;color: #999;font-size: 15px;">{{post.created_at}}</h4>
+                {% if post.heading %}
+                  <h2 id="head">{{post.heading}}</h2>
+                {% endif %}
+                {% if post.image %}  
+                  <img src="{{post.image.url}}" alt="" id="images">
+                {% endif%}
+                <p id="content">{{post.content}}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+            <form action="{% url 'web:community_post' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form">
+                    <input type="file" id="image" accept="image/*" hidden name="image"/>
+                    <label for="image">Image (Optional)</label>
+                    <input type="text" name="heading" id="heading" placeholder="Your Heading (Optional)" />
+                    <textarea id="post" name="content" placeholder="Your Content..."></textarea>
+                    <button type="submit" id="submit">Post</button> 
+                </div>  
+            </form>
+        </section>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        
+        <!-- Branding -->
+        <div class="footer-section">
+          <img src="{% static './images/logo-text.png' %}" alt=""/>
+          <p class="footer-description">
+            Explore fun math games, in-depth documentation, interactive exercises, powerful tools, and a friendly community — all in one place.
+          </p>
+        </div>
+  
+        <!-- Explore -->
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="{% url 'web:games' %}">Math Games</a></li>
+            <li><a href="{% url 'web:documentation' %}">Documentation</a></li>
+            <li><a href="{% url 'web:exercises' %}">Exercises</a></li>
+            <li><a href="{% url 'web:tools' %}">Tools</a></li>
+            <li><a href="{% url 'web:community' %}">Community</a></li>
+          </ul>
+        </div>
+  
+        <!-- Resources -->
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+              <li><a href="{% url 'web:index' %}">FAQ</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Connect -->
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <p>Address: Nafil Manzil / Mekkone / Kottamkara / Chandanathope P.O. / Kollam-691014 / Kerala / India</p>
+          <p>Email: nafilmnytfj@gmail.com</p>
+          <p>Phone Number: +91 9544758339</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Mathbox. All rights reserved.
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,827 @@
+@font-face {
+    font-family: mulish;
+    src: url(../fonts/Mulish-VariableFont_wght.ttf);
+}
+body {
+    margin: 0;
+    background: #000;
+    font-family: mulish;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 39px;
+    color: #fff;
+}
+p {
+    overflow-wrap: break-word;
+}
+input:focus {
+    outline: none;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 50px;
+    height: 70px;
+    background: linear-gradient(#000, #000, #000, #000, #000, #000, #000, #000, rgb(0, 55, 55));
+}
+header h1 a img {
+    width: 200px;
+    filter: invert(100%);
+    height: 195px;
+    margin-bottom: -13px;
+    margin-left: -33px;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 30px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: teal;
+    font-size: 21px;
+}
+header nav ul li a img {
+    width: 15px;
+    filter: invert(50%);
+}
+header nav ul li a:hover {
+    border-top: 2px teal outset;
+    border-bottom: 2px teal outset;
+    border-radius: 5px;
+    width: calc(-12px);
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul li div.mode {
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid teal;
+    margin-right: 20px;
+}
+header ul li div.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid teal;
+    border-radius: 11px;
+    border-top-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    padding: 5px 15px;
+}
+header ul li div.form input {
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 15px;
+    width: 130px;
+    color: teal;
+}
+header ul li div.form img {
+    width: 40px;
+    filter: invert(100%);
+}
+section.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+section.home {
+    height: 83vh;
+    background-image: url(../images/bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -200px;
+    width: 100%;
+}
+div.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 111px;
+}
+section.home h1 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 0 auto;
+    border-radius: 9px;
+    text-align: center;
+    width: 1000px;
+    border-left: cyan 7px solid;
+    border-right: cyan 7px solid;
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 69px;
+    animation-name: textgen;
+    animation-duration: 3s;
+}
+@keyframes textgen {
+    0% {
+        width: 1px;
+        height: 69px;
+    }
+    100% {
+        width: 1000px;
+        height: 69px;
+    }
+}
+section.home p {
+    color: #aaa;
+    overflow-wrap: break-word;
+    width: 950px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 37px;
+}
+section.home button {
+    padding: 27px;
+    background: linear-gradient(180deg, transparent, #f53, #f53, transparent);
+    font-size: 19px;
+    border: none;
+    border-radius: 39px;
+    color: #fff;
+}
+section.home button img {
+    width: 21px;
+    margin-bottom: -4px;
+    filter: invert(100%);
+}
+section.activity {
+    height: 50vh;
+}
+section.activity div.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+section.activity div.flex div.box {
+    padding: 39px;
+    width: 500px;
+    background: linear-gradient(90deg, #ff906b, #ff4000);
+    border-radius: 19px;
+    color: #fff;
+    height: 250px;
+}
+section.activity div.flex div.box:first-child {
+    background: linear-gradient(90deg, #a200ff, #c561ff);
+}
+section.activity div.flex div.box button.orange {
+    margin-top: 49px;
+}
+section.activity div.flex div.box h1 {
+    font-size: 45px;
+    margin-top: 0px;
+    border-bottom: 5px solid #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 19px;
+}
+section.activity div.flex div.box p {
+    font-size: 21px;
+    overflow-wrap: break-word;
+}
+section.activity div.flex div.box button {
+    padding: 17px 21px;
+    background: none;
+    color: transparent;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    border: 3px solid #fff;
+}
+section.activity div.flex div.box button img {
+    width: 19px;
+    filter: invert(100%);
+    margin-bottom: -5px;
+}
+section.doc {
+    height: 70vh;
+    margin-top: 130px;
+}
+section.doc div.title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 3px solid #aaa;
+    border-radius: 3.5px;
+}
+section.doc div.title h1 {
+    background: -webkit-linear-gradient(teal, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: 9px;
+}
+section.doc div.title img {
+    width: 33px;
+    filter: invert(100%);
+    margin-left: 21px;
+    margin-bottom: -30px;
+}
+section.doc div.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid teal;
+    border-radius: 19px;
+    margin-top: 33px;
+    padding: 0px;
+    height: 500px;
+    overflow: hidden;
+}
+section.doc div.flex p {
+    overflow-wrap: break-word;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 55px;
+}
+section.doc div.flex div.content {
+    padding: 33px;
+    height: 100%;
+}
+section.doc div.flex button {
+    background: teal;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 19px;
+    font-size: 21px;
+    margin-top: 39px;
+}
+section.doc div.flex img {
+    width: 500px;
+}
+section.tool {
+    height: 70vh;
+    margin-top: 230px;
+}
+section.tool div.title {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 3px solid #aaa;
+    border-radius: 3.5px;
+}
+section.tool div.title h1 {
+    background: -webkit-linear-gradient(teal, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: 9px;
+}
+section.tool div.title img {
+    width: 33px;
+    filter: invert(100%);
+    margin-left: 21px;
+    margin-bottom: -30px;
+}
+section.tool div.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid teal;
+    border-radius: 19px;
+    margin-top: 33px;
+    padding: 0px;
+    height: 500px;overflow: hidden;
+}
+section.tool div.flex p {
+    overflow-wrap: break-word;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 55px;
+}
+section.tool div.flex div.content {
+    padding: 33px;
+    height: 100%;
+}
+section.tool div.flex button {
+    background: teal;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 19px;
+    font-size: 21px;
+    margin-top: 39px;
+}
+section.tool div.flex img {
+    width: 515px;
+}
+section.com {
+    height: 70vh;
+    margin-top: 230px;
+}
+section.com div.title {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 3px solid #aaa;
+    border-radius: 3.5px;
+}
+section.com div.title h1 {
+    background: -webkit-linear-gradient(teal, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: 9px;
+}
+section.com div.title img {
+    width: 33px;
+    filter: invert(100%);
+    margin-left: 21px;
+    margin-bottom: -30px;
+}
+section.com div.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid teal;
+    border-radius: 19px;
+    margin-top: 33px;
+    padding: 0px;
+    height: 500px;
+    overflow: hidden;
+}
+section.com div.flex p {
+    overflow-wrap: break-word;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 55px;
+}
+section.com div.flex div.content {
+    padding: 33px;
+    height: 100%;
+}
+section.com div.flex button {
+    background: teal;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 19px;
+    font-size: 21px;
+}
+section.com div.flex img {
+    width: 675px;
+}
+section.features {
+    margin-top: 70px;
+}
+section.features div.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 190px;
+}
+section.features div.grid div.box {
+    background: #000;
+    border: rgb(210, 0, 225) 5px solid;
+    width: 500px;
+    height: 400px;
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+}
+section.features div.grid div.box img {
+    width: 200px;
+    filter: invert(100%);
+    margin-bottom: 27px;
+}
+section.features div.grid div.box h3 {
+    font-size: 39px;
+    font-weight: 600;
+    color: rgb(210, 0, 255);
+}
+.footer {
+    margin-top: 111px;
+    background-color: teal;
+    color: white;
+    padding: 40px 20px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-description {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #d0f0f0;
+}
+.footer-section img {
+    filter: invert(100%);
+    width: 200px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+div.footer-section ul li a {
+    color: #b2ebeb;
+    text-decoration: none;
+}
+div.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #b2ebeb;
+}
+section.document {
+    margin-bottom: 100px;
+}
+section.document div.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    overflow: hidden;
+    margin-bottom: 27px;
+}
+section.document h1.kids {
+    width: 100%;
+    text-align: center;
+    background: teal;
+    margin: 0px;
+    padding: 9px;
+}
+section.document h1.students {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    background: rgb(55, 155, 155);
+    padding: 9px;
+    filter: blur(1.5px) brightness(100%);
+}
+section.document div.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-top: teal 3px groove;
+}
+section.document div.flex div.right {
+    display: none;
+}
+section.document div.flex div.kids-card {
+    margin: 0 auto;
+    border-bottom: 5px solid #a200ff;
+}
+section.document div.flex div.kids-card h1 {
+    color: #9399f7;
+    font-size: 45px;
+    text-decoration-line: underline;
+    text-align: center;
+    border-right: 3px solid #9399f7;
+    border-left: 3px solid #9399f7;
+}
+section.document div.flex div.kids-card p {
+    color: #ccc;
+    font-size: 21px;
+    line-height: 45px;
+    margin-bottom: 33px;
+}
+section.document div.flex div.kids-card div.flex_button {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-bottom: 33px;
+}
+section.document div.flex div.kids-card div.flex_button a {
+    padding: 19px;
+    background: #ff4000;
+    border-radius: 11px;
+    color: #fff;
+    text-decoration: none;
+}
+section.document div.flex div.students-card {
+    margin: 0 auto;
+    border-bottom: 5px solid #a200ff;
+}
+section.document div.flex div.students-card h1 {
+    color: #9399f7;
+    font-size: 45px;
+    text-decoration-line: underline;
+    text-align: center;
+    border-right: 3px solid #9399f7;
+    border-left: 3px solid #9399f7;
+}
+section.document div.flex div.students-card p {
+    color: #ccc;
+    font-size: 21px;
+    line-height: 45px;
+    margin-bottom: 33px;
+}
+section.document div.flex div.students-card div.flex_button {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-bottom: 33px;
+}
+section.document div.flex div.students-card div.flex_button a {
+    padding: 19px;
+    background: #ff4000;
+    border-radius: 11px;
+    color: #fff;
+    text-decoration: none;
+}
+section.faq {
+    margin-top: 270px;
+    color: #fff;
+}
+section.faq h1 {
+    color: teal;
+    font-size: 45px;
+    height: 70px;
+    border-bottom: 3px solid teal;
+}
+section.faq div.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    border: 3px solid teal;
+    padding: 19px;
+    border-radius: 19px;
+}
+section.faq div.grid div.box {
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.faq div.grid div.box:first-child {
+    border-bottom: 3px solid teal;
+    border-right: 3px solid teal;
+}
+section.faq div.grid div.box:nth-child(2) {
+    border-bottom: 3px solid teal;
+    border-right: 3px solid teal;
+}
+section.faq div.grid div.box:nth-child(3) {
+    border-bottom: 3px solid teal;
+}
+section.faq div.grid div.box:nth-child(4) {
+    border-right: 3px solid teal;
+}
+section.faq div.grid div.box:nth-child(5) {
+    border-right: 3px solid teal;
+}
+section.faq div.grid div.box h3 {
+    color: #55c5c5;
+}
+section.list h1 {
+    font-size: 45px;
+    color: #27f27f;
+    width: 30%;
+    display: block;
+    border-bottom: #27f27f solid 5px;
+}
+section.list div.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+section.list div.flex a.tool-card {
+    border-radius: 27px;
+    color: #111;
+    border: 5px solid #333;
+    padding: 5px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+section.list div.flex a.tool-card div.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section.list div.flex a.tool-card h3.about {
+    color: teal;
+    font-size: 33px;
+}
+section.list div.flex a.exercise-card {
+    border-radius: 27px;
+    color: #111;
+    border: 5px solid #333;
+    padding: 5px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+section.list div.flex a.exercise-card div.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section.list div.flex a.exercise-card h3.about {
+    color: #fff;
+    font-size: 33px;
+    margin-right: 19px;
+}
+section.list div.flex a.exercise-card h3.sec {
+    color: teal;
+    font-size: 33px;
+}
+section.game h1 {
+    font-size: 45px;
+    color: #27f27f;
+    width: 30%;
+    display: block;
+    border-bottom: #27f27f solid 5px;
+}
+section.game div.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    gap: 55px;
+}
+section.game div.grid a.game-card {
+    border-radius: 19px;
+    border: teal 1px solid;
+    box-shadow: 1px 0px 19px 3px teal;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+section.game div.grid a.game-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: filter 0.5s ease;
+}
+section.game div.grid a.game-card h3 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* smooth transition */
+    /* Additional styling for h3 (positioning, color, etc.) */
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(65, 200, 200);
+    text-align: center;
+    display: block;
+    width: 83%;
+    margin: 0 auto;
+    font-size: 33px;
+}
+section.game div.grid a.game-card h4 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* smooth transition */
+    /* Additional styling for h3 (positioning, color, etc.) */
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: cyan;
+    text-align: center;
+    border: 2px solid cyan;
+    border-radius: 33px;
+    display: block;
+    width: 45%;
+    padding: 9px;
+    margin: 0 auto;
+    font-size: 21px;
+}
+section.game div.grid a.game-card:hover h3 {
+    opacity: 1;
+}
+section.game div.grid a.game-card:hover h4 {
+    opacity: 1;
+}
+section.game div.grid a.game-card:hover img {
+    filter: blur(9px);
+}
+section.community div.post_container {
+    width: 100%;
+    height: 550px;
+    overflow-y: scroll;
+    border-radius: 19px;
+    border: 1px solid teal;
+    padding: 19px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+section.community div.post_container::-webkit-scrollbar {
+    display: none;
+}
+section.community div.post_container h2 {
+    color: #9900ff;
+    text-align: center;
+    font-size: 39px;
+}
+section.community div.post_container img {
+    display: block;
+    width: 100%;
+    border-radius: 27px;
+}
+section.community div.post_container p {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 55px;
+    margin-top: 55px;
+    font-size: 19px;
+    border-bottom: 3px solid #a200ff;
+}
+section.community div.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 21px;
+    border: 3px solid teal;
+    background: #111;
+    padding: 15px;
+    margin-top: 100px;
+}
+section.community div.form label {
+    background: #333;
+    border-radius: 19px;
+    padding: 19px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+}
+section.community div.form input {
+    background: #333;
+    border-radius: 19px;
+    padding: 19px;
+    border: none;
+    font-size: 19px;
+    color: #fff;
+}
+section.community div.form textarea#post {
+    background: #333;
+    border-radius: 19px;
+    padding: 19px;
+    border: none;
+    font-size: 19px;
+    color: #fff;
+    resize: none;
+    height: 22px;
+    font-family: mulish;
+    overflow: hidden;
+    width: 45%;
+}
+section.community div.form textarea#post:focus {
+    outline: none;
+}
+section.community div.form button#submit {
+    border: none;
+    background: teal;
+    padding: 11px;
+    color: #fff;
+    border-radius: 19px;
+    height: 55px;
+    width: 9%;
+    font-size: 19px;
+    cursor: pointer;
+}
