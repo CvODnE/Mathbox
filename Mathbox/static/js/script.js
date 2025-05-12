@@ -150,4 +150,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+    const close = document.getElementById("close");
+
+    if(close){
+      close.addEventListener(("click"), function() {
+        nav.style.cssText = "width: 0%;"
+      });
+    }
+    if(menu){
+      menu.addEventListener(("click"), function() {
+        nav.style.cssText = "width: 27%;"
+      });
+    }
 });

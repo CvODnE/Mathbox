@@ -11,6 +11,7 @@
 </head>
 <body>
   <header>
+    <img src="{% static './images/menu.svg' %}" alt="" id="menu"/>
     <h1>
         <a href="#">
             <img src="{% static './images/logo-text.svg' %}" alt=""/>
@@ -22,8 +23,8 @@
             <li><a href="{% url 'web:documentation' %}">Documentation</a></li>
             <li><a href="{% url 'web:exercises' %}">Exercises</a></li>
             <li><a href="{% url 'web:games' %}">Games</a></li>
-            <li><a href="{% url 'web:community' %}">Community</a></li>
-            <li><a href="{% url 'web:tools' %}">Tools <img src="{% static './images/arrow-down-sign-to-navigate.svg' %}" alt=""/></a></li>
+            <li><a href="{% url 'web:community' %}">Community</a></li></a></li>
+            <li><a href="{% url 'web:tools' %}">Tools</a></li>
         </ul>
     </nav>
     <ul>
@@ -35,6 +36,17 @@
         </li>
     </ul>
   </header>
+  <div id="nav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" id="close">&times;</a>
+    <div class="overlay-content">
+        <a href="{% url 'web:index' %}">Home</a>
+        <a href="{% url 'web:documentation' %}">Documentation</a>
+        <a href="{% url 'web:exercises' %}">Exercises</a>
+        <a href="{% url 'web:games' %}">Games</a>
+        <a href="{% url 'web:community' %}">Community</a>
+        <a href="{% url 'web:tools' %}">Tools</a>
+    </div>
+</div>
     <section class="list">
         <section class="wrapper">
             <h1>Here Exercises !</h1>

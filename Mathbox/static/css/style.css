@@ -31,6 +31,14 @@ header {
     height: 70px;
     background: linear-gradient(#000, #000, #000, #000, #000, #000, #000, #000, rgb(0, 55, 55));
 }
+header img#menu {
+    width: 33px;
+    height: 33px;
+    padding: 11px;
+    border: 1px solid teal;
+    border-radius: 7px;
+    display: none;
+}
 header h1 a img {
     width: 200px;
     filter: invert(100%);
@@ -49,10 +57,6 @@ header nav ul li a {
     text-decoration: none;
     color: teal;
     font-size: 21px;
-}
-header nav ul li a img {
-    width: 15px;
-    filter: invert(50%);
 }
 header nav ul li a:hover {
     border-top: 2px teal outset;
@@ -95,6 +99,47 @@ header ul li div.form img {
     width: 40px;
     filter: invert(100%);
 }
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.overlay a {
+    padding: 7px;
+    text-decoration: none;
+    font-size: 27px;
+    color: teal;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: rgb(14, 150, 150);
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+}
 section.wrapper {
     width: 90%;
     margin: 0 auto;
@@ -120,23 +165,18 @@ section.home h1 {
     margin: 0 auto;
     border-radius: 9px;
     text-align: center;
-    width: 1000px;
+    width: 90%;
     border-left: cyan 7px solid;
     border-right: cyan 7px solid;
     margin-bottom: 30px;
     overflow: hidden;
     height: 69px;
-    animation-name: textgen;
-    animation-duration: 3s;
+    text-wrap: nowrap;
+    animation: textgen 2s steps(19);
 }
 @keyframes textgen {
-    0% {
-        width: 1px;
-        height: 69px;
-    }
-    100% {
-        width: 1000px;
-        height: 69px;
+    from {
+        width: 1%;
     }
 }
 section.home p {
@@ -824,4 +864,374 @@ section.community div.form button#submit {
     width: 9%;
     font-size: 19px;
     cursor: pointer;
+}
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .overlay {
+        width: 0;
+    }
+    section.home {
+        padding-bottom: 55px;
+    }
+    section.home h1 {
+        font-size: 45px;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+    section.doc div.title {
+        margin-top: 100px;
+    }
+    section.tool div.title {
+        margin-top: 120px;
+    }
+    section.tool div.flex div.content p {
+        margin-top: 27px;
+    }
+    section.tool div.flex div.content button {
+        margin-top: 17px;
+    }
+    section.com div.title {
+        margin-top: 190px;
+    }
+    section.com div.flex div.content p {
+        margin-top: 27px;
+        font-size: 19px;
+    }
+    section.com div.flex div.content button {
+        margin-top: -5px;
+        font-size: 15px;
+    }
+    section.faq {
+        margin-top: 470px;
+    }
+    section.activity div.flex div.box {
+        width: 430px;
+        height: 310px;
+    }
+    section.activity div.flex div.box:first-child button.violet {
+        margin-top: 51px;
+    }
+    section.activity div.flex div.box:last-child button.orange {
+        margin-top: 81px;
+    }
+    section.features div.grid {
+        gap: 60px;
+    }
+    section.features div.grid div.box {
+        width: 470px;
+        height: 415px; 
+    }
+    section.list h1 {
+        font-size: 43px;
+    }
+    section.game div.grid a.game-card {
+        width: 270px;
+        height: 270px;
+    }
+    section.community div.form {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    section.community div.form input#heading {
+        display: block;
+        width: 79%;
+    }
+    section.community div.form textarea#post {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        width: 100%;
+    }
+    .overlay {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+    header h1 {
+        display: block;
+        text-align: right;
+    }
+    header nav {
+        display: none;
+        visibility: hidden;
+    }
+    header ul {
+        display: none;
+        visibility: hidden;
+    }
+    header img#menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+    .overlay a {
+        font-size: 13px;
+    }
+    img#menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+        visibility: hidden;
+    }
+    header ul {
+        display: none;
+        visibility: hidden;
+    }
+    header h1 a img {
+        width: 150px;
+        height: auto;
+        margin-left: -15px;
+    }    
+    .overlay {
+        width: 100%;
+    }
+    
+    .overlay a {
+        font-size: 28px;
+    }
+    
+    .overlay .closebtn {
+        font-size: 50px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    img#menu {
+        display: block;
+    }
+    .overlay {
+        width: 0;
+    }
+    .overlay a {
+        font-size: 13px;
+    }
+    header {
+        width: 75%;
+        margin: 0 auto;
+    }
+    section.home {
+        padding-bottom: 55px;
+    }
+    section.home h1 {
+        font-size: 19px;
+    }
+    section.home p {
+        font-size: 11px;
+        overflow-wrap: break-word;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 9px;
+        line-height: 19px;
+        margin-top: 9px;
+    }
+    section.activity div.flex div.box {
+        width: 110px;
+        height: 110px;
+        padding: 19px;
+    }
+    section.activity div.flex div.box h1 {
+        font-size: 19px;
+        margin-bottom: 3px;
+        border-bottom: 1.5px solid #fff;
+        border-radius: 1px;
+    }
+    section.activity div.flex div.box p {
+        font-size: 7px;
+    }
+    section.activity div.flex div.box button {
+        font-size: 7px;
+        padding: 7px;
+        border-width: 1.5px;
+    }
+    section.activity div.flex div.box button.violet {
+        margin-bottom: 0px;
+        position: relative;
+        top: -50px;
+    }
+    section.activity div.flex div.box button.orange {
+        margin-bottom: 0px;
+        position: relative;
+        top: -70px;
+    }
+    section.activity div.flex div.box button img {
+        width: 13px;
+    }
+    section.doc div.title {
+        margin-top: -21px;
+    }
+    section.doc div.title h1 {
+        font-size: 19px;
+    }
+    section.doc div.title img {
+        width: 19px;
+        margin-bottom: -10px;
+    }
+    section.doc div.flex {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 19px;
+        height: 270px;
+    }
+    section.doc div.flex img.bg {
+        display: none;
+    }
+    section.doc div.flex div.content {
+        padding: 15px;
+    }
+    section.doc div.flex div.content p {
+        font-size: 11px;
+        margin-top: 19px;
+    }
+    section.tool {
+        margin-top: 90px; 
+    }
+    section.tool div.title {
+        margin-top: -21px;
+    }
+    section.tool div.title h1 {
+        font-size: 19px;
+    }
+    section.tool div.title img {
+        width: 19px;
+        margin-bottom: -10px;
+    }
+    section.tool div.flex {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 19px;
+        height: 270px;
+    }
+    section.tool div.flex img.bg {
+        display: none;
+    }
+    section.tool div.flex div.content {
+        padding: 15px;
+    }
+    section.tool div.flex div.content p {
+        font-size: 11px;
+        margin-top: 19px;
+    }
+    section.com {
+        margin-top: 100px;
+    }
+    section.com div.title {
+        margin-top: -21px;
+    }
+    section.com div.title h1 {
+        font-size: 19px;
+    }
+    section.com div.title img {
+        width: 19px;
+        margin-bottom: -10px;
+    }
+    section.com div.flex {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 19px;
+        height: 270px;
+    }
+    section.com div.flex img.bg {
+        display: none;
+    }
+    section.com div.flex div.content {
+        padding: 15px;
+    }
+    section.com div.flex div.content p {
+        font-size: 11px;
+        margin-top: 19px;
+        margin-bottom: 55px;
+    }
+    section.faq {
+        margin-top: 100px;
+    }
+    section.faq div.grid {
+        padding: 0px;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: stretch;
+    }
+    section.faq div.grid div.box {
+        width: 50px;
+        height: 75px;
+    }
+    section.faq div.grid div.box h3 {
+        font-size: 7px;
+    }
+    section.faq div.grid div.box p {
+        font-size: 3px;
+    }
+    section.features div.grid div.box {
+        width: 150px;
+        height: 100px;
+    }
+    section.features div.grid div.box img {
+        width: 35px;
+    }
+    section.features div.grid div.box h3 {
+        font-size: 11px;
+    }
+    section.document div.tabs h1 {
+        font-size: 19px;
+    }
+    section.list h1 {
+        font-size: 17px;
+    }
+    section.game h1 {
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+    section.game div.grid {
+        width: 90%;
+        margin: 0 auto;
+        gap: 30px;
+    }
+    section.game div.grid a.game-card {
+        width: 100px;
+        height: 100px;
+    }
+    section.game div.grid a.game-card img {
+        filter: blur(3px);
+    }
+    section.game div.grid a.game-card h3 {
+        top: 27%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(65, 200, 200);
+        text-align: center;
+        display: block;
+        width: 83%;
+        margin: 0 auto;
+        opacity: 100%;
+        font-size: 9px;
+    }
+    section.game div.grid a.game-card h4 {
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(65, 200, 200);
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        opacity: 100%;
+        font-size: 7px;
+    }
+    section.community div.form button#submit {
+        display: block;
+        width: 100%;
+    }
 }
